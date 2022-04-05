@@ -26,29 +26,46 @@
         <activity android:name=".activities.ConfigActivity" />
         <activity
             android:name=".dialogs.MainDialog"
+            android:exported="true"
             android:excludeFromRecents="true"
             android:noHistory="true"
             android:theme="@android:style/Theme.DeviceDefault.Dialog">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
+                <action
+                    android:name="android.intent.action.VIEW"
+                    android:exported="true"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
+                <category
+                    android:name="android.intent.category.DEFAULT"
+                    android:exported="true"/>
+                <category
+                    android:name="android.intent.category.BROWSABLE"
+                    android:exported="true"/>
 
                 <data android:scheme="http" />
                 <data android:scheme="https" />
             </intent-filter>
             <intent-filter>
-                <action android:name="android.intent.action.SEND" />
-                <category android:name="android.intent.category.DEFAULT" />
+                <action
+                    android:name="android.intent.action.SEND"
+                    android:exported="true"/>
+                <category
+                    android:name="android.intent.category.DEFAULT"
+                    android:exported="true"/>
                 <data android:mimeType="text/plain" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.MainActivity">
+        <activity
+            android:name=".activities.MainActivity"
+            android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action
+                    android:name="android.intent.action.MAIN"
+                    android:exported="true"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category
+                    android:name="android.intent.category.LAUNCHER"
+                    android:exported="true"/>
             </intent-filter>
         </activity>
 
