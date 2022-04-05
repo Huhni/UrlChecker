@@ -96,7 +96,28 @@ public class MainDialog extends Activity {
         initializeModules();
 
         // load url
-        setUrl(getOpenUrl(), null);
+        String openURL = getOpenUrl();
+        setUrl(openURL, null);
+
+        // Automatically apply ClearURL:
+        View clearURL = this.findViewById(R.id.fix);
+        clearURL.callOnClick();
+
+        // Automatically apply check status code for t.co links
+        if (openURL.startsWith("https://t.co/")){
+            View statusCheck = this.findViewById(R.id.check);
+            statusCheck.callOnClick();
+            // Automatically setUrl(redirectionUrl) in StatusModule.java
+        }
+
+        // Automatically open twitter links in Twidere?
+        if (openURL.startsWith("https://twitter.com/") || openURL.startsWith("https://mobile.twitter.com/")){
+            View openLink = this.findViewById(R.id.open);
+            openLink.callOnClick();
+
+        }
+
+
     }
 
     /**
