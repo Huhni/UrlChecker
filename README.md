@@ -1,5 +1,7 @@
 # Url Checker
 
+- Lazily modified to always use ClearURL without user interaction and to automatically get redirection of t.co/ links.
+
 Android app made by TrianguloY
 
 Get it on Google Play:\
@@ -13,6 +15,7 @@ https://f-droid.org/packages/com.trianguloy.urlchecker/ \
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
 alt="Get it on F-Droid"
 height="80">](https://f-droid.org/packages/com.trianguloy.urlchecker/)
+
 
 ### Contribution
 
